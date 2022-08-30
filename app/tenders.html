@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Nuga Best</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrapper">
+            <header class="header">
+                <div class="header-top">
+                    <div class="container">
+                        <a href="/" class="logo">
+                            <img src="img/temp/logo.png" alt="">
+                        </a>
+                        <div class="search">
+                            <form action="/">
+                                <input type="text" placeholder="Найти товар">
+                                <button type="submit">
+                                    <svg><use xlink:href="#icon-search"></use></svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="control-menu">
+                            <div class="select-wrapper">
+                                <select class="city-select">
+                                    <option selected>Москва</option>
+                                    <option>СПБ</option>
+                                </select>
+                            </div>
+                            <a href="/">Мой кабинет</a>
+                            <a href="contacts.html">Контакты</a>
+                            <a href="tel:88000000000" class="phone">8(800) 000-00-00</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom">
+                    <div class="container">
+                        <nav class="menu">
+                            <ul>
+                                <li class="active">
+                                    <span class="menu-link">Главная</span>
+                                </li>
+                                <li>
+                                    <a href="catalog.html" class="menu-link">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="sales.html" class="menu-link">Акции</a>
+                                </li>
+                                <li>
+                                    <a href="about.html" class="menu-link">O бренде</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="/">A1</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">A2</a>
+                                        </li>
+                                        <li>
+                                            <a href="/">A3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="libraries.html" class="menu-link">Бибилиотеки</a>
+                                </li>
+                                <li>
+                                    <a href="/" class="menu-link">Залы рядом</a>
+                                </li>
+                                <li>
+                                    <a href="tenders.html" class="menu-link">Тендеры</a>
+                                </li>
+                                <li>
+                                    <a href="rent-credit.html" class="menu-link">Аренда и кредит</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+			<main class="content">
+                <section class="block block-banner-text block-tenders-banner-text">
+                    <div class="container grey">
+                        <div class="text">
+                            <h1 class="page-title smaller">как стать дилером Нуга бест</h1>
+                            <!-- <div class="title-descr">Товары для здоровья из Кореи</div> -->
+                        </div>
+                        <div class="banner"></div>
+                        <!-- <button class="btn red circle">Кнопка</button> -->
+                    </div>
+                </section>
+
+                <section class="block block-tenders-about">
+                    <div class="container">
+                        <h2 class="block-title">о компании</h2>
+                        <div class="about-content">
+                            <p>
+                                <b>NUGA BEST</b> - это южнокорейская компания, один из крупнейших производителей медицинского оборудования для домашнего применения. <strong>NUGA BEST</strong> создаёт и продаёт как профильное медицинское оборудование, так и оборудование для улучшения качества жизни. Мы являемся официальным партнёром корейской компании «Нуга Бест» в России и реализуем оборудование с официальной гарантией и сервисным обслуживанием в Сибирском федеральном округе.
+                            </p>
+                            <iframe src="https://www.youtube.com/embed/1WHAGaRgzDA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-item-value">16</div>
+                                <div class="stat-item-title">лет на рынке России</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-item-value">300</div>
+                                <div class="stat-item-title">представительств России</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-item-value">115</div>
+                                <div class="stat-item-title">стран</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-item-value">3500</div>
+                                <div class="stat-item-title">дилеров в мире</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="block block-tender-advantages-icons">
+                    <div class="container">
+                        <h2 class="block-title">ЧТО ПОЛУЧАЕТ ДИЛЕР?</h2>
+                        <div class="icons-grid">
+                            <div class="icon-item">
+                                <div class="icon-item-image">
+                                    <svg width="64" height="70" viewBox="0 0 64 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.041 19.4435C17.3364 19.4435 20.8184 15.9614 20.8184 11.6661C20.8184 7.37078 17.3364 3.88873 13.041 3.88873C8.74572 3.88873 5.26367 7.37078 5.26367 11.6661C5.26367 15.9614 8.74572 19.4435 13.041 19.4435Z" fill="#2330B8"/>
+                                        <path d="M46.0977 25.2782C49.3192 25.2782 51.9307 22.6667 51.9307 19.4452C51.9307 16.2237 49.3192 13.6122 46.0977 13.6122C42.8762 13.6122 40.2646 16.2237 40.2646 19.4452C40.2646 22.6667 42.8762 25.2782 46.0977 25.2782Z" fill="#2330B8"/>
+                                        <path d="M15.9571 68.0557C7.4027 64.9458 2.02323 59.6296 0.402344 57.3618C8.17972 21.5829 34.1067 4.21214 46.0944 0L49.9849 2.91652C17.3196 23.9176 13.6893 55.0958 15.9571 68.0557ZM43.1815 67.0835C37.7352 69.4181 33.1345 70 31.5137 70C30.7366 40.4445 51.2824 22.0365 61.6546 16.5287L63.5971 21.3896C46.4847 33.0557 42.8563 56.7131 43.1815 67.0835Z" fill="#2330B8"/>
+                                    </svg>
+                                </div>
+                                <div class="icon-item-title">
+                                    Эксклюзивное право работать под торговой маркой <span>NUGA</span> <span>BEST</span> на закрепленной территории
+                                </div>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon-item-image">
+                                    <svg width="78" height="76" viewBox="0 0 78 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M49.9896 60.8381C51.8847 62.7086 50.5436 65.9048 47.8636 65.9048H12.5312C9.3411 65.9048 6.28156 64.6543 4.02538 62.4282C1.76921 60.2021 0.501134 57.1827 0.5 54.034V21.9684C0.5 21.0522 0.606943 20.1571 0.807998 19.2978C1.3363 17.0326 4.196 16.2346 5.86433 17.8792C6.59797 18.6033 6.89955 19.6462 6.66642 20.6447C6.56803 21.0712 6.51669 21.5145 6.51669 21.9684V25.8465H13.2906C14.0884 25.8465 14.8541 26.1589 15.4188 26.7163C17.3117 28.5867 15.9706 31.766 13.2906 31.766H6.51456V54.0319C6.51512 55.6066 7.14927 57.1165 8.27756 58.2297C9.40585 59.343 10.9359 59.9684 12.5312 59.9684H47.8636C48.6614 59.9684 49.4249 60.2808 49.9896 60.8381ZM71.4854 39.2056V31.7829H36.9552L65.5094 59.9662C67.0968 59.954 68.6151 59.3237 69.7342 58.2124C70.8533 57.1012 71.4827 55.5988 71.4854 54.0319C71.4854 53.2447 71.8023 52.4897 72.3663 51.9331C72.9302 51.3764 73.6951 51.0637 74.4927 51.0637C75.2903 51.0637 76.0552 51.3764 76.6192 51.9331C77.1832 52.4897 77.5 53.2447 77.5 54.0319C77.4976 56.3111 76.8313 58.5416 75.5807 60.4576C74.33 62.3736 72.5476 63.8944 70.4459 64.8387L76.6188 70.9314C76.8981 71.2071 77.1197 71.5344 77.2709 71.8946C77.4221 72.2548 77.4999 72.6409 77.4999 73.0309C77.4999 73.4208 77.4221 73.8069 77.2709 74.1671C77.1197 74.5273 76.8981 74.8547 76.6188 75.1304C76.3394 75.4061 76.0078 75.6248 75.6428 75.774C75.2779 75.9232 74.8867 76 74.4916 76C74.0966 76 73.7054 75.9232 73.3405 75.774C72.9755 75.6248 72.6439 75.4061 72.3645 75.1304L1.38336 5.06684C0.819496 4.51001 0.502835 3.75492 0.503035 2.96765C0.503236 2.18038 0.820282 1.42544 1.38443 0.868897C1.94858 0.312355 2.71362 -0.000197861 3.51124 9.39735e-08C4.30887 0.000198049 5.07375 0.31313 5.63761 0.869952L14.9846 10.0955H65.4709C68.6596 10.0994 71.7166 11.3513 73.9716 13.5766C76.2266 15.8019 77.4955 18.819 77.5 21.9663V39.2035C77.5 39.991 77.1831 40.7462 76.6189 41.3031C76.0547 41.8599 75.2895 42.1728 74.4916 42.1728C73.6938 42.1728 72.9286 41.8599 72.3644 41.3031C71.8003 40.7462 71.4833 39.991 71.4833 39.2035L71.4854 39.2056ZM71.4854 25.8465V21.9684C71.4832 20.3943 70.8485 18.8853 69.7206 17.7724C68.5926 16.6595 67.0636 16.0336 65.4688 16.0319H20.997L30.9407 25.8465H71.4854Z" fill="#CE2E4B"/>
+                                    </svg>
+                                </div>
+                                <div class="icon-item-title">Отсутствие оплаты за право получения дилерства</div>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon-item-image">
+                                    <svg width="44" height="83" viewBox="0 0 44 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M42.766 49.9694C42.421 48.7506 41.9372 47.5754 41.3242 46.4669C40.7586 45.4732 39.9512 44.5061 38.8976 43.5567C38.0001 42.7348 37.0518 41.9703 36.0583 41.2675C35.2176 40.6886 34.0642 40.0387 32.598 39.3222C31.4554 38.7519 30.2955 38.2171 29.1199 37.7185C27.8893 37.2215 26.6522 36.7409 25.4089 36.2767C24.3356 35.8692 23.2672 35.4492 22.2037 35.0168C21.5005 34.7284 20.5778 34.3136 19.431 33.779C18.2864 33.2467 17.4324 32.772 16.8668 32.3594C16.2353 31.8923 15.6317 31.3887 15.059 30.8511C14.4683 30.3286 14.0054 29.6775 13.7059 28.9479C13.4418 28.2462 13.3102 27.5016 13.3177 26.7519C13.3177 24.6735 14.2338 22.981 16.066 21.6657C17.8982 20.3547 20.265 19.6982 23.1642 19.6982C24.4872 19.7028 25.804 19.8796 27.0814 20.2239C28.2515 20.5195 29.3931 20.9181 30.4929 21.415C31.4401 21.8586 32.334 22.3466 33.1725 22.879C34.0132 23.4158 34.6076 23.8195 34.9581 24.0946C35.3108 24.3696 35.5326 24.5515 35.6236 24.6447C36.0228 24.9485 36.431 25.055 36.8591 24.9641C37.3182 24.933 37.6687 24.689 37.9127 24.2321L41.6237 17.5443C41.9897 16.9343 41.9143 16.3532 41.3952 15.8053C41.1725 15.584 40.9432 15.3694 40.7076 15.162C40.4325 14.918 39.8381 14.4744 38.9197 13.8356C37.9964 13.1893 37.025 12.6146 36.014 12.1165C34.9892 11.613 33.6627 11.1028 32.0279 10.5837C30.3808 10.0613 28.6848 9.70831 26.9661 9.53011V1.4671C26.9728 1.27281 26.94 1.07918 26.8694 0.898029C26.7988 0.716877 26.6921 0.552004 26.5557 0.413475C26.4172 0.276297 26.2521 0.168926 26.0705 0.0979713C25.8889 0.0270165 25.6947 -0.00601808 25.4999 0.000899681H19.3179C19.1253 -0.000969185 18.9345 0.0366444 18.7571 0.111421C18.5797 0.186198 18.4195 0.296548 18.2864 0.435657C18.1473 0.568744 18.037 0.728935 17.9622 0.906338C17.8874 1.08374 17.8498 1.27459 17.8517 1.4671V9.70978C13.0582 10.6259 9.16534 12.671 6.17304 15.8474C3.18074 19.0238 1.68348 22.7171 1.68348 26.9316C1.68348 28.1826 1.81657 29.3716 2.07388 30.5028C2.33341 31.6341 2.65504 32.6478 3.03656 33.5484C3.41809 34.4511 3.95932 35.3362 4.66247 36.2057C5.36341 37.0752 6.02886 37.825 6.65438 38.4505C7.2799 39.076 8.09619 39.7237 9.10323 40.3958C10.1125 41.0679 10.9754 41.6091 11.6918 42.0217C12.4105 42.4321 13.3643 42.909 14.5533 43.4413C15.7466 43.9737 16.6849 44.3796 17.3703 44.6547C18.0579 44.9297 18.9984 45.3113 20.1874 45.7992C21.8377 46.4403 23.0599 46.9372 23.854 47.2876C24.6481 47.6381 25.6551 48.1283 26.8774 48.7516C28.0973 49.3794 28.9913 49.9494 29.5569 50.4707C30.1203 50.9897 30.6327 51.6308 31.0896 52.3938C31.5488 53.1569 31.7773 53.9665 31.7773 54.8227C31.7773 57.2339 30.839 59.0971 28.9602 60.408C27.0836 61.7212 24.9076 62.3778 22.4344 62.3778C21.2948 62.3767 20.1586 62.2541 19.045 62.0118C15.0745 61.2177 11.3658 59.3101 7.91651 56.2867L7.82557 56.1958C7.69723 56.0332 7.52689 55.9088 7.33297 55.8361C7.13905 55.7634 6.92894 55.7451 6.72536 55.7832C6.23737 55.8453 5.88468 56.0272 5.67174 56.3333L0.953708 62.5175C0.496767 63.1275 0.527825 63.753 1.04687 64.3941C1.19993 64.5782 1.46611 64.8532 1.84763 65.2192C2.22915 65.5852 2.93896 66.1575 3.97706 66.9383C5.01516 67.7147 6.14642 68.4467 7.36641 69.1343C8.5864 69.8219 10.1391 70.5029 12.0157 71.175C13.8945 71.8449 15.8398 72.3174 17.8561 72.5946V80.6066C17.8561 81.0059 18.0003 81.3475 18.2908 81.6381C18.5792 81.9286 18.923 82.0728 19.3201 82.0728H25.5043C25.6986 82.0797 25.8923 82.0469 26.0734 81.9763C26.2546 81.9058 26.4195 81.799 26.5579 81.6625C26.6945 81.5241 26.8014 81.3592 26.872 81.178C26.9426 80.9968 26.9753 80.8031 26.9683 80.6088V72.5924C31.8261 71.7983 35.7722 69.7155 38.8088 66.3416C41.8477 62.9678 43.3671 58.9441 43.3671 54.2748C43.3671 52.7465 43.1675 51.3114 42.7682 49.9672L42.766 49.9694Z" fill="#2330B8"/>
+                                    </svg>
+                                </div>
+                                <div class="icon-item-title">Отлаженную бизнес модель, которая приносит прибыль. Окупаемость 3-4 месяца</div>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon-item-image">
+                                    <svg width="74" height="84" viewBox="0 0 74 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.46925 63.5704L35.5308 82.6077C35.9788 82.8648 36.485 83 37 83C37.515 83 38.0212 82.8648 38.4692 82.6077L71.5307 63.5727C72.4398 63.0488 73 62.0831 73 61.0353V22.9654C73 21.9176 72.4398 20.9518 71.5307 20.428L38.4692 1.39298C38.0214 1.13541 37.5151 1 37 1C36.4849 1 35.9786 1.13541 35.5308 1.39298L2.46925 20.4302C1.56025 20.9541 1 21.9222 1 22.9676V61.0376C1 62.0854 1.56025 63.0511 2.46925 63.575V63.5704ZM6.8725 28.0379L34.0638 43.6904V75.0001L6.8725 59.3453V28.0379ZM39.9362 75.0001V43.6904L67.1275 28.0379V59.3453L39.9385 75.0001H39.9362ZM37 7.31052L64.189 22.9654L37 38.6202L9.811 22.9654L37 7.31052Z" fill="#CE2E4B" stroke="#CE2E4B"/>
+                                    </svg>
+                                </div>
+                                <div class="icon-item-title">Востребованный потребителями продукт</div>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon-item-image">
+                                    <svg width="76" height="60" viewBox="0 0 76 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M72.6928 1.00013H47.2829C43.8334 0.985135 40.5101 2.29943 38 4.67129C35.4899 2.29943 32.1666 0.985135 28.7171 1.00013H3.30714C1.75786 1.00013 0.5 2.22027 0.5 3.72396V50.8004C0.5 52.3041 1.75786 53.5264 3.30714 53.5264H28.7171C31.5843 53.5264 34.1879 55.0602 35.5079 57.5305L35.5186 57.5477C35.7626 57.992 36.1222 58.3617 36.5592 58.6174C36.9961 58.8731 37.4941 59.0053 38 58.9998C39.0286 58.9998 40.0014 58.4478 40.4921 57.5305C41.8121 55.0602 44.4136 53.5264 47.2829 53.5264H72.6928C74.2421 53.5264 75.5 52.3062 75.5 50.8004V3.72396C75.5 2.22027 74.2421 1.00013 72.6928 1.00013ZM35.1929 49.7048C33.2028 48.6312 30.9771 48.0715 28.7171 48.0766H6.11643V6.44995H28.7171C31.3721 6.44995 33.7979 7.76461 35.1929 9.91704V49.7048ZM47.2829 48.0766C45.0229 48.0718 42.7973 48.6314 40.8071 49.7048V9.91704C41.5121 8.84325 42.474 7.96345 43.6051 7.35785C44.7362 6.75226 46.0006 6.44014 47.2829 6.44995H69.8836V48.0766H47.2829Z" fill="#2330B8" stroke="#2330B8"/>
+                                    </svg>
+                                </div>
+                                <div class="icon-item-title">Систематическое обучение персонала</div>
+                            </div>
+                            <div class="icon-item">
+                                <div class="icon-item-image">
+                                    <svg width="96" height="60" viewBox="0 0 96 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M53.4395 19.3271L38.567 38.1693L27.6902 17.4684L27.688 17.4611C27.3473 16.8211 26.8644 16.2897 26.2858 15.9182C25.7072 15.5468 25.0524 15.3477 24.3847 15.3403H24.3803C23.7102 15.3357 23.0505 15.5243 22.4651 15.8878C21.8798 16.2512 21.3887 16.7772 21.0396 17.4145V17.4194L1.85952 51.9544C1.51005 52.4378 1.25797 52.9994 1.12037 53.601C0.982775 54.2025 0.962881 54.83 1.06204 55.4409C1.1612 56.0518 1.37709 56.6317 1.69507 57.1415C2.01305 57.6512 2.42569 58.0788 2.905 58.3953C3.38432 58.7117 3.91909 58.9096 4.47307 58.9755C5.02704 59.0414 5.58727 58.9739 6.11575 58.7773C6.64422 58.5808 7.12859 58.26 7.53601 57.8366C7.94343 57.4131 8.26437 56.897 8.47707 56.3233L24.1803 27.8005L34.4 47.4165C34.6574 47.9077 34.9991 48.3376 35.4056 48.6815C35.8122 49.0255 36.2756 49.2767 36.7694 49.4209C37.2632 49.5651 37.7776 49.5994 38.2833 49.5219C38.789 49.4444 39.276 49.2565 39.7165 48.9691C40.0681 48.7389 40.3846 48.4499 40.655 48.112L55.9846 29.0053L65.123 42.2394L65.145 42.2713L65.1713 42.3031C65.5486 42.7789 66.0065 43.167 66.5186 43.4452C67.0308 43.7234 67.5872 43.8862 68.1559 43.9243L68.1955 43.9267H68.2329C68.8296 43.9202 69.4169 43.7607 69.9494 43.4604C70.4818 43.1601 70.9451 42.7273 71.3032 42.1953V42.1929L94.2855 7.83427V7.83182C94.8694 6.91299 95.1091 5.77687 94.9538 4.6644C94.7986 3.55192 94.2605 2.55059 93.4538 1.87273C92.6471 1.19488 91.6351 0.893832 90.6325 1.03342C89.6299 1.17302 88.7155 1.74227 88.0833 2.62047C88.0386 2.68468 87.9996 2.75357 87.9668 2.82618L87.7273 3.35761L68.2944 32.3873L59.4285 19.5451C59.0789 19.0376 58.6326 18.6229 58.1218 18.3307C57.6111 18.0385 57.0485 17.8762 56.4747 17.8553H56.4703C55.899 17.8372 55.3313 17.9598 54.8074 18.2142C54.2835 18.4686 53.8165 18.8486 53.4395 19.3271Z" fill="#CE2E4B" stroke="#CE2E4B"/>
+                                    </svg>
+                                </div>
+                                <div class="icon-item-title">Маркетинговую, юридическую и управленческую поддержку</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="block block-tender-advantages-text">
+                    <div class="container grey">
+                        <h2 class="block-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
+                        <div class="advantages-text">
+                            <div class="advantage-item">
+                                <h3>ГЛОБАЛЬНЫЙ ЛИДЕР</h3>
+                                <p>Компания Nuga Medical, крупнейший производитель товаров в данном сегменте</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h3>МНОГОЛЕТНИЙ УСПЕШНЫЙ ОПЫТ ВЕДЕНИЯ БИЗНЕСА</h3>
+                                <p>Более 17 лет на мировом рынке, 15 лет на российском рынке</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h3>МАРКЕТИНГОВОЕ СОПРОВОЖДЕНИЕ</h3>
+                                <p>Рекламная поддержка дилеров. Nuga Best регулярно участвует в различных проектах в СМИ</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h3>КАЧЕСТВО ПРЕВЫШЕ ВСЕГО</h3>
+                                <p>Товар производится в Южной Корее. Производство продукции контролируется на всех этапах</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h3>МИНИМАЛЬНЫЕ <br> СРОКИ ПОСТАВКИ</h3>
+                                <p>Наличие региональных складов позволяет получить заказ в минимальные сроки</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h3>ШИРОКИЙ АССОРТИМЕНТ</h3>
+                                <p>Постоянное обновление каталога, предложение новых изделий, гарантирует постоянное внимание клиентов к вашему залу</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h3>ПОДДЕРЖКА</h3>
+                                <p>Сопровождение бизнеса</p>
+                            </div>
+                            <div class="advantage-item">
+                                <h3>ЕДИНАЯ ЛИНИЯ</h3>
+                                <p>Наличие единой «горячей» линии для клиентов компании</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="block block-certificates">
+                    <div class="container">
+                        <h2 class="block-title">Сертификаты</h2>
+                        <div class="certificates-list">
+                            <div class="swiper-container js-scrollbar-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-1.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-1.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Бренд года</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-2.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-2.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">FDA certification N5-1</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-3.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-3.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Inno-Biz SME Certificate(2021~2024)</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-4.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-4.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Применение турмания для профилактики, леч...</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-5.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-5.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Inno-Biz SME Certificate(2021~2024)</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-1.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-1.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Бренд года</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-2.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-2.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">FDA certification N5-1</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-3.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-3.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Inno-Biz SME Certificate(2021~2024)</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-4.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-4.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Применение турмания для профилактики, леч...</div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="img/temp/certificate-5.jpg" class="certificate-item" data-fancybox="certificates">
+                                            <div class="certificate-item-photo">
+                                                <img src="img/temp/certificate-5.jpg" alt="" loading="lazy">
+                                            </div>
+                                            <div class="certificate-item-title">Inno-Biz SME Certificate(2021~2024)</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-controls">
+                                    <div class="swiper-btn swiper-btn-prev"></div>
+                                    <div class="swiper-scrollbar"></div>
+                                    <div class="swiper-btn swiper-btn-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="block block-tender-partnership">
+                    <div class="container">
+                        <h2 class="block-title">
+                            КАК ПРОИСХОДИТ СОТРУДНИЧЕСТВО
+                        </h2>
+                        <div class="partnership-steps">
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">1. Проведение <br> переговоров</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">2. Заключение дилерского <br>договора</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">3. Поиск локации <br> и помещения</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">4. Разаработка плана мероприятий</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">5. Проведение ремонтных работ</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">6. Обучение персонала</div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">
+                                    7. Презентация - <br> открытие зала
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-item-banner"></div>
+                                <div class="step-item-title">8. Сопровождение <br> Нуга Бест</div>
+                            </div>
+                        </div>
+                        <button class="btn red circle">Подать заявку</button>
+                    </div>
+                </section>
+			</main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="logo">
+                        <img src="img/temp/logo-white.png" alt="" loading="lazy">
+                    </div>
+                    <button class="btn red">
+                        Оставить заявку
+                    </button>
+                    <nav class="menu">
+                        <ul>
+                            <li>
+                                <a href="contacts.html">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="vacancies.html">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="articles.html">Полезные статьи</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copyright">
+                        © 2022 Нуга Бест Сибирь. Все права защищены.
+                    </div>
+                </div>
+            </footer>
+
+            <div class="sprite" style="height: 0; overflow: hidden;">
+                <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <symbol viewBox="0 0 20 20" fill="none" id="icon-search">
+                        <path d="M9.58334 17.5001C13.9556 17.5001 17.5 13.9557 17.5 9.58341C17.5 5.21116 13.9556 1.66675 9.58334 1.66675C5.21108 1.66675 1.66667 5.21116 1.66667 9.58341C1.66667 13.9557 5.21108 17.5001 9.58334 17.5001Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.3333 18.3334L16.6667 16.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </symbol>
+                    <symbol viewBox="0 0 20 20" id="icon-star">
+                        <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="currentColor"/>
+                    </symbol>
+                </svg>
+            </div>
+		</div>
+
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

@@ -16,6 +16,7 @@
             left: initial;
             bottom: initial;
             width: auto;
+            z-index: 5;
         }
         &-drag {
             background-color: $blue;

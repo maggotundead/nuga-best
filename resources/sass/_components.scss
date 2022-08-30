@@ -5,6 +5,9 @@
     line-height: 1.185;
     font-style: italic;
     text-transform: uppercase;
+    &.smaller {
+        font-size: rem(74);
+    }
 }
 .block-title {
     text-align: center;
@@ -34,6 +37,10 @@
     &.blue {
         background-color: $blue;
     }
+    &.blue-border {
+        background-color: transparent;
+        border: 1px solid $blue;
+    }
     &.red {
         background-color: $red;
     }
@@ -51,7 +58,7 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    border: 3px solid #3A3A3A;
+    border: 3px solid $grey-border;
     border-radius: rem(36);
     padding: rem(24);
     &-photo {
@@ -107,3 +114,98 @@
         line-height: 1.5;
     }
 }
+
+.breadcrumbs {
+    margin-top: rem(128);
+    padding-top: rem(30);
+    font-size: rem(14);
+    line-height: 1.43;
+    ul {
+        list-style: none;
+        text-align: center;
+    }
+    li {
+        display: inline-flex;
+        align-items: center;
+        &:not(:last-child) {
+            &::after {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-7.49338e-08 10.2857L4.375 6L-4.49603e-07 1.71429L0.875 -3.82475e-08L7 6L0.875 12L-7.49338e-08 10.2857Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+                background-size: rem(7) rem(12);
+                width: rem(7);
+                height: rem(12);
+                margin: 0 rem(10);
+            }
+        }
+    }
+    a {
+        color: $red;
+        text-decoration: underline;
+    }
+    span {
+        text-transform: uppercase;
+        color: $grey;
+        font-weight: 700;
+    }
+}
+
+// tabs
+.tabs {
+    .tab-selectors {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        &.blue {
+            .tab-selector.active {
+                background-color: $blue;
+                border-color: $blue;
+            }
+        }
+        &.red {
+            .tab-selector.active {
+                background-color: $red;
+                border-color: $red;
+            }
+        }
+    }
+    .tab-selector {
+        height: rem(40);
+        border-radius: rem(20);
+        border: 1px solid $grey;
+        color: $grey;
+        font-size: rem(16);
+        flex-grow: 0;
+        font-weight: 500;
+        padding: 0 rem(30);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &.active {
+            pointer-events: none;
+            // background-color: $red;
+            color: #fff;
+            border-color: $red;
+            font-size: rem(20);
+            font-weight: 600;
+        }
+    }
+    .divider {
+        display: block;
+        width: rem(8);
+        height: rem(8);
+        background-color: $grey;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tabs-content {
+        padding-top: rem(60);
+    }
+    .tab {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+// end tabs
