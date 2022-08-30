@@ -1,0 +1,64 @@
+.modal {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $duration;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    &.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(#000, .7);
+    }
+    &-body {
+        padding: rem(70);
+        background-color: #fff;
+        border-radius: rem(28);
+        width: 100%;
+        max-width: rem(510);
+        position: relative;
+        z-index: 2;
+        @include mobile {
+            max-width: mobrem(360);
+            border-radius: mobrem(16);
+            padding: mobrem(32) mobrem(48);
+        }
+    }
+    &-close {
+        position: absolute;
+        top: rem(32);
+        right: rem(30);
+        font-size: 0;
+        width: rem(24);
+        height: rem(24);
+        background-size: 100%;
+        @include mobile {
+            width: mobrem(20);
+            height: mobrem(20);
+            top: mobrem(24);
+            right: mobrem(24);
+        }
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-title {
+    }
+    &-descr {
+    }
+}

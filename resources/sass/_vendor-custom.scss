@@ -1,0 +1,39 @@
+.swiper {
+    &-controls {
+        margin-top: rem(40);
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &-scrollbar {
+        margin: 0 rem(28);
+        background: $grey-bg;
+        border-radius: 0;
+        flex-grow: 1;
+        height: 5px;
+        &.swiper-scrollbar-horizontal {
+            position: relative;
+            left: initial;
+            bottom: initial;
+            width: auto;
+        }
+        &-drag {
+            background-color: $blue;
+        }
+    }
+    &-btn {
+        width: rem(48);
+        height: rem(48);
+        border-radius: 50%;
+        backdrop-filter: blur(11px);
+        background-image: url("data:image/svg+xml,%3Csvg width='14' height='24' viewBox='0 0 14 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.4874 0.502103C14.1709 1.17157 14.1709 2.257 13.4874 2.92647L4.22487 12L13.4874 21.0735C14.1709 21.743 14.1709 22.8284 13.4874 23.4979C12.804 24.1674 11.696 24.1674 11.0126 23.4979L0.512563 13.2122C-0.170854 12.5427 -0.170854 11.4573 0.512563 10.7878L11.0126 0.502103C11.696 -0.167368 12.804 -0.167368 13.4874 0.502103Z' fill='%232330B8'/%3E%3C/svg%3E%0A");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: rem(14) rem(24);
+        background-color: $grey-bg;
+        transition: $duration;
+        &-next {
+            transform: rotate(-180deg);
+        }
+    }
+}
