@@ -120,32 +120,7 @@
         margin-right: rem(16);
     }
     .search {
-        width: 100%;
         max-width: rem(440);
-        position: relative;
-        margin-right: auto;
-        input {
-            width: 100%;
-            display: block;
-            height: rem(36);
-            background-color: transparent;
-            border: 1px solid $grey;
-            border-radius: rem(30);
-            padding-left: rem(55);
-            font-size: rem(14);
-            color: inherit;
-        }
-        button {
-            pointer-events: none;
-            position: absolute;
-            border: 0;
-            top: rem(8);
-            left: rem(18);
-            svg {
-                width: rem(20);
-                height: rem(20);
-            }
-        }
     }
     .control-menu {
         display: flex;

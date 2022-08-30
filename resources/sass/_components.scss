@@ -55,6 +55,34 @@
     }
 }
 
+.search {
+    width: 100%;
+    position: relative;
+    margin-right: auto;
+    input {
+        width: 100%;
+        display: block;
+        height: rem(36);
+        background-color: transparent;
+        border: 1px solid $grey;
+        border-radius: rem(30);
+        padding-left: rem(55);
+        font-size: rem(14);
+        color: inherit;
+    }
+    button {
+        pointer-events: none;
+        position: absolute;
+        border: 0;
+        top: rem(8);
+        left: rem(18);
+        svg {
+            width: rem(20);
+            height: rem(20);
+        }
+    }
+}
+
 .product-card {
     display: flex;
     flex-direction: column;
@@ -209,3 +237,58 @@
     }
 }
 // end tabs
+
+.pagination {
+    display: flex;
+    align-items: center;
+    padding-left: rem(50);
+    button {
+        width: rem(16);
+        height: rem(16);
+        border: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: rem(8) rem(13);
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.13794 1.63801L2.27594 6.50001L7.13794 11.362L6.19527 12.3047L0.390606 6.50001L6.19527 0.695343L7.13794 1.63801Z' fill='%23C8C8C8'/%3E%3C/svg%3E%0A");
+        &:first-child {
+            margin-right: rem(20);
+        }
+        &:last-child {
+            margin-left: rem(20);
+            transform: rotate(-180deg);
+            // background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.862061 1.63801L5.72406 6.50001L0.862061 11.362L1.80473 12.3047L7.60939 6.50001L1.80473 0.695343L0.862061 1.63801Z' fill='%23C8C8C8'/%3E%3C/svg%3E%0A");
+        }
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: rem(40);
+        height: rem(40);
+        border-radius: 50%;
+        font-size: rem(22);
+        font-weight: 700;
+        color: $grey;
+        &:not(:last-child) {
+            margin-right: rem(20);
+        }
+        &.current {
+            color: #fff;
+            background-color: $blue;
+        }
+        &.last {
+            background-color: $grey-border;
+        }
+    }
+    span {
+        width: rem(40);
+        height: rem(40);
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='7' viewBox='0 0 24 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3' cy='3.5' r='3' fill='%233A3A3A'/%3E%3Ccircle cx='12' cy='3.5' r='3' fill='%233A3A3A'/%3E%3Ccircle cx='21' cy='3.5' r='3' fill='%233A3A3A'/%3E%3C/svg%3E%0A");
+        background-size: rem(24) rem(7);
+        background-position: center;
+        background-repeat: no-repeat;
+        &:not(:last-child) {
+            margin-right: rem(20);
+        }
+    }
+}

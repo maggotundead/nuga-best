@@ -38,3 +38,61 @@
         }
     }
 }
+
+// range input
+.irs {
+    flex-grow: 1;
+    &.irs--flat {
+        .irs-line {
+            height: 2px;
+            background-color: $grey;
+            border-radius: 0;
+        }
+        .irs-bar {
+            background-color: $red;
+            height: 2px;
+        }
+        .irs-single {
+            background-color: $red;
+            &::before {
+                border-top-color: $red;
+            }
+        }
+        .irs-handle {
+            height: 10px;
+            cursor: pointer;
+            &:hover,
+            &:focus {
+                > i {
+                    &:first-child {
+                        background-color: $red;
+                    }
+                }
+            }
+            > i {
+                &:first-child {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+}
+
+// gmaps
+.gm-style-iw.gm-style-iw-c {
+    box-shadow: 0;
+    padding: rem(20);
+    padding-left: rem(50);
+    border-radius: rem(70) rem(10) rem(10) rem(10);
+    background-color: $grey-bg;
+    max-width: initial !important;
+    width: rem(260) !important;
+}
+.gm-style-iw-tc {
+    display: none;
+}
+.gm-ui-hover-effect {
+    span {
+        filter: invert(1);
+    }
+}
