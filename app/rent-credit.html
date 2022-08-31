@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
 		<title>Nuga Best</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
@@ -22,7 +23,7 @@
                         <div class="search">
                             <form action="/">
                                 <input type="text" placeholder="Найти товар">
-                                <button type="submit">
+                                <button type="button" class="search-submit js-mobile-search-closer">
                                     <svg><use xlink:href="#icon-search"></use></svg>
                                 </button>
                             </form>
@@ -38,6 +39,16 @@
                             <a href="contacts.html">Контакты</a>
                             <a href="tel:88000000000" class="phone">8(800) 000-00-00</a>
                         </div>
+
+                        <button class="mobile-search-btn js-mobile-search-opener">
+                            <svg><use xlink:href="#icon-search"></use></svg>
+                        </button>
+                        <button class="burger-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
                 </div>
                 <div class="header-bottom">
@@ -71,7 +82,7 @@
                                     <a href="libraries.html" class="menu-link">Бибилиотеки</a>
                                 </li>
                                 <li>
-                                    <a href="/" class="menu-link">Залы рядом</a>
+                                    <a href="nearby.html" class="menu-link">Залы рядом</a>
                                 </li>
                                 <li>
                                     <a href="tenders.html" class="menu-link">Тендеры</a>
@@ -81,6 +92,59 @@
                                 </li>
                             </ul>
                         </nav>
+                    </div>
+                </div>
+
+                <div class="mobile-menu">
+                    <nav class="menu">
+                        <ul>
+                            <li class="active">
+                                <span class="menu-link">Главная</span>
+                            </li>
+                            <li>
+                                <a href="catalog.html" class="menu-link">Каталог</a>
+                            </li>
+                            <li>
+                                <a href="sales.html" class="menu-link">Акции</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="menu-link js-mobile-dropdown-toggler">O бренде</a>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a href="/">A1</a>
+                                    </li>
+                                    <li>
+                                        <a href="/">A2</a>
+                                    </li>
+                                    <li>
+                                        <a href="/">A3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="libraries.html" class="menu-link">Бибилиотеки</a>
+                            </li>
+                            <li>
+                                <a href="nearby.html" class="menu-link">Залы рядом</a>
+                            </li>
+                            <li>
+                                <a href="tenders.html" class="menu-link">Тендеры</a>
+                            </li>
+                            <li>
+                                <a href="rent-credit.html" class="menu-link">Аренда и кредит</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="control-menu">
+                        <div class="select-wrapper">
+                            <select class="city-select">
+                                <option selected>Москва</option>
+                                <option>СПБ</option>
+                            </select>
+                        </div>
+                        <a href="/">Мой кабинет</a>
+                        <a href="contacts.html">Контакты</a>
+                        <a href="tel:88000000000" class="phone">8(800) 000-00-00</a>
                     </div>
                 </div>
             </header>
@@ -153,7 +217,7 @@
                 </section>
                 <section class="block block-rent-usage-places">
                     <div class="container">
-                        <h2 class="block-title">Пдойдёт для любого <br> помещения</h2>
+                        <h2 class="block-title">Подойдёт для любого <br> помещения</h2>
                         <div class="usage-places">
                             <div class="place-item">
                                 <div class="place-item-banner"></div>
@@ -176,7 +240,7 @@
                 </section>
                 <section class="block block-rent-advantages">
                     <div class="container">
-                        <h2 class="block-title">Приемущества <br> аренды</h2>
+                        <h2 class="block-title">Преимущества <br> аренды</h2>
                         <div class="advantage-items">
                             <div class="advantage-item">
                                 <div class="advantage-item-icon">
@@ -260,26 +324,37 @@
                         <h2 class="block-title">Три кита</h2>
                         <div class="title-descr">Здесь надо подумать над текстом, но скорее всего пояснение, что это самые популярные товары</div>
                         <div class="products-grid">
-                            <div class="product-item">
-                                <div class="product-item-photo">
-                                    <img src="img/temp/popular-1.png" alt="">
+                            <div class="swiper-container js-top-products-swiper-mobile">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="product-item-photo">
+                                                <img src="img/temp/popular-1.png" alt="">
+                                            </div>
+                                            <div class="product-item-title">Кровать №4</div>
+                                            <a href="/" class="btn red product-item-details">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="product-item-photo">
+                                                <img src="img/temp/popular-2.png" alt="">
+                                            </div>
+                                            <div class="product-item-title">Массажёр №5</div>
+                                            <a href="/" class="btn red product-item-details">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="product-item-photo">
+                                                <img src="img/temp/popular-3.png" alt="">
+                                            </div>
+                                            <div class="product-item-title">Турманиевый мат</div>
+                                            <a href="/" class="btn red product-item-details">Подробнее</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="product-item-title">Кровать №4</div>
-                                <a href="/" class="btn red product-item-details">Подробнее</a>
-                            </div>
-                            <div class="product-item">
-                                <div class="product-item-photo">
-                                    <img src="img/temp/popular-2.png" alt="">
-                                </div>
-                                <div class="product-item-title">Массажёр №5</div>
-                                <a href="/" class="btn red product-item-details">Подробнее</a>
-                            </div>
-                            <div class="product-item">
-                                <div class="product-item-photo">
-                                    <img src="img/temp/popular-3.png" alt="">
-                                </div>
-                                <div class="product-item-title">Турманиевый мат</div>
-                                <a href="/" class="btn red product-item-details">Подробнее</a>
+                                <div class="swiper-scrollbar"></div>
                             </div>
                         </div>
                     </div>
@@ -423,7 +498,7 @@
                     <div class="logo">
                         <img src="img/temp/logo-white.png" alt="" loading="lazy">
                     </div>
-                    <button class="btn red">
+                    <button class="btn red" js-modal-callback-btn>
                         Оставить заявку
                     </button>
                     <nav class="menu">
@@ -432,7 +507,7 @@
                                 <a href="contacts.html">Контакты</a>
                             </li>
                             <li>
-                                <a href="vacancies.html">Контакты</a>
+                                <a href="vacancies.html">Вакансии</a>
                             </li>
                             <li>
                                 <a href="articles.html">Полезные статьи</a>
@@ -454,8 +529,36 @@
                     <symbol viewBox="0 0 20 20" id="icon-star">
                         <path d="M10 0L13.09 6.26L20 7.27L15 12.14L16.18 19.02L10 15.77L3.82 19.02L5 12.14L0 7.27L6.91 6.26L10 0Z" fill="currentColor"/>
                     </symbol>
+                    <symbol viewBox="0 0 24 24" id="icon-close">
+                        <path d="M18.9665 0.867675L12.0002 7.83413C9.67828 5.51298 7.35558 3.18958 5.03325 0.867675C2.34672 -1.81879 -1.81759 2.34692 0.866689 5.03414C3.18939 7.35454 5.51285 9.67832 7.83293 12.0002C5.51179 14.3232 3.18971 16.6452 0.866689 18.9663C-1.81759 21.652 2.34709 25.8166 5.03325 23.1328C7.3552 20.8101 9.6779 18.4871 11.9999 16.1659L18.9661 23.1328C21.6526 25.8185 25.8181 21.6524 23.1327 18.9663C20.8099 16.6437 18.488 14.3217 16.1645 11.9995C18.4876 9.67682 20.8096 7.35417 23.1327 5.03189C25.8184 2.34692 21.653 -1.81879 18.9661 0.869174" fill="currentColor"/>
+                    </symbol>
                 </svg>
             </div>
+
+            <div class="modal modal-callback">
+				<div class="modal-overlay"></div>
+				<div class="modal-body">
+					<div class="modal-content">
+						<button class="modal-close">
+                            <svg><use xlink:href="#icon-close"></use></svg>
+                        </button>
+						<h3 class="block-title modal-title">Оставьте заявку</h3>
+                        <div class="modal-descr">Заполните форму и нажмите кнопку “Оставить заявку” и наш менеджер свяжется с вами</div>
+						<form action="/" class="modal-form">
+							<div class="input-wrapper">
+								<input type="text" placeholder="Имя" required id="input-name">
+							</div>
+							<div class="input-wrapper">
+								<input type="text" placeholder="Номер телефона" required>
+							</div>
+							<div class="input-wrapper">
+								<input type="email" placeholder="Электронная почта">
+							</div>
+							<button class="btn red modal-submit">Оставить заявку</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script src="js/scripts.js"></script>

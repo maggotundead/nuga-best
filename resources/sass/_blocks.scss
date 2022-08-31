@@ -142,10 +142,10 @@
 
     .container {
         position: relative;
-        @include mobile {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
+        // @include mobile {
+        //     border-top-left-radius: 0;
+        //     border-top-right-radius: 0;
+        // }
     }
     .text {
         position: relative;
@@ -223,6 +223,13 @@
         padding-top: $block-padding-y-mobile;
         padding-bottom: $block-padding-y-mobile;
     }
+
+    + .block-feedback {
+        @include mobile {
+            padding-top: 0;
+        }
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -883,7 +890,7 @@
     .product-title {
         font-size: rem(30);
         line-height: 1.35;
-        font-weight: 600;
+        font-weight: 500;
         @include mobile {
             display: none;
         }
@@ -1838,6 +1845,9 @@ article {
 
 .block-sales {
     padding-top: $block-padding-y-desktop;
+    @include mobile {
+        padding-top: $block-padding-y-mobile;
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -1945,6 +1955,9 @@ article {
 .block-contact {
     padding-top: rem(120);
     padding-bottom: rem(20);
+    @include mobile {
+        padding-top: $block-padding-y-mobile;
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -1958,6 +1971,11 @@ article {
         line-height: 1.43;
         letter-spacing: .2px;
         color: $grey;
+        @include mobile {
+            margin-top: mobrem(20);
+            max-width: 100%;
+            font-size: mobrem(20);
+        }
     }
     form {
         margin-top: rem(46);
@@ -1966,6 +1984,10 @@ article {
         align-items: center;
         width: 100%;
         max-width: rem(550);
+        @include mobile {
+            margin-top: mobrem(40);
+            max-width: 100%;
+        }
     }
     .input-wrapper {
         position: relative;
@@ -1983,9 +2005,15 @@ article {
         padding: 0 rem(20);
         font-size: rem(16);
         line-height: 1.39;
-        letter-spacing: .005em;
+        letter-spacing: .2px;
         background-color: transparent;
         color: #fff;
+        @include mobile {
+            height: mobrem(42);
+            border-radius: mobrem(30);
+            padding: 0 mobrem(20);
+            font-size: mobrem(16);
+        }
     }
     input {
         &::placeholder {
@@ -2013,17 +2041,30 @@ article {
             top: 50%;
             transform: translateY(-50%);
             pointer-events: none;
+            @include mobile {
+                width: mobrem(14);
+                height: mobrem(8);
+                right: mobrem(20);
+                background-size: mobrem(14) mobrem(8);
+            }
         }
     }
     .btn {
         margin-top: rem(40);
         font-size: rem(22);
         line-height: 1.23;
+        @include mobile {
+            margin-top: mobrem(40);
+            font-size: mobrem(22);
+        }
     }
 }
 
 .block-rent-about {
     padding-top: rem(80);
+    @include mobile {
+        padding-top: mobrem(60);
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -2036,6 +2077,11 @@ article {
         line-height: 1.43;
         letter-spacing: .2px;
         color: #c8c8c8;
+        @include mobile {
+            margin-top: mobrem(32);
+            max-width: 100%;
+            font-size: mobrem(20);
+        }
         span {
             color: $red;
             font-style: italic;
@@ -2047,16 +2093,26 @@ article {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: rem(180);
+        @include mobile {
+            margin-top: mobrem(40);
+            max-width: 100%;
+            grid-template-columns: 1fr;
+            gap: mobrem(32);
+        }
     }
     .about-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         &-icon {
-            width: 100%;
-            max-width: rem(176);
+            width: rem(176);
+            height: rem(176);
             padding-bottom: 100%;
             position: relative;
+            @include mobile {
+                width: mobrem(176);
+                height: mobrem(176);
+            }
         }
         svg {
             width: 100%;
@@ -2072,17 +2128,29 @@ article {
             letter-spacing: .2px;
             color: #c8c8c8;
             text-align: center;
+            @include mobile {
+                margin-top: mobrem(20);
+                font-size: mobrem(20);
+            }
         }
     }
 }
 .block-rent-usage-places {
-    padding-top: rem(120);
+    // padding-top: rem(120);
+    padding-top: $block-padding-y-desktop;
     // padding-bottom: rem(120);
+    @include mobile {
+        padding-top: $block-padding-y-mobile;
+    }
     .usage-places {
         margin-top: rem(40);
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: rem(20);
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: mobrem(20);
+        }
     }
     .place-item {
         border: 3px solid $grey-border;
@@ -2093,22 +2161,47 @@ article {
         border-radius: rem(10);
         overflow: hidden;
         height: rem(354);
+        @include mobile {
+            padding: mobrem(24);
+            border-radius: mobrem(10);
+            height: mobrem(200);
+        }
         &:nth-child(1) {
-            border-top-left-radius: $library-article-big-radius;
-            grid-column: span 2;
+            @include not-mobile {
+                border-top-left-radius: $library-article-big-radius;
+                grid-column: span 2;
+            }
+            @include mobile {
+                border-top-left-radius: $library-article-big-radius-mobile;
+            }
         }
         &:nth-child(2) {
-            border-top-right-radius: $library-article-big-radius;
-            grid-column: span 3;
+            @include not-mobile {
+                border-top-right-radius: $library-article-big-radius;
+                grid-column: span 3;
+            }
+            @include mobile {
+                border-top-right-radius: $library-article-big-radius-mobile;
+            }
         }
         &:nth-child(3) {
-            border-bottom-left-radius: $library-article-big-radius;
-            grid-column: span 3;
-            justify-content: flex-end;
+            @include not-mobile {
+                border-bottom-left-radius: $library-article-big-radius;
+                grid-column: span 3;
+                justify-content: flex-end;
+            }
+            @include mobile {
+                border-top-left-radius: $library-article-big-radius-mobile;
+            }
         }
         &:nth-child(4) {
-            border-bottom-right-radius: $library-article-big-radius;
-            grid-column: span 2;
+            @include not-mobile {
+                border-top-left-radius: $library-article-big-radius;
+                grid-column: span 2;
+            }
+            @include mobile {
+                border-top-right-radius: $library-article-big-radius-mobile;
+            }
         }
         &-banner {
             position: absolute;
@@ -2134,16 +2227,30 @@ article {
             font-size: rem(30);
             line-height: 1.35;
             font-weight: 500;
+            @include mobile {
+                font-size: mobrem(24);
+            }
         }
     }
 }
 .block-rent-advantages {
-    padding-top: rem(120);
+    // padding-top: rem(120);
+    padding-top: $block-padding-y-desktop;
+    @include mobile {
+        padding-top: $block-padding-y-mobile;
+    }
+
     .advantage-items {
         margin-top: rem(60);
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         column-gap: rem(106);
+        @include mobile {
+            margin-top: mobrem(40);
+            gap: mobrem(40);
+            grid-template-columns: mobrem(176);
+            justify-content: center;
+        }
     }
     .advantage-item {
         &-icon {
@@ -2165,6 +2272,10 @@ article {
             letter-spacing: .2px;
             color: #c8c8c8;
             text-align: center;
+            @include mobile {
+                margin-top: mobrem(20);
+                font-size: mobrem(20);
+            }
         }
     }
 }
@@ -2286,18 +2397,31 @@ article {
 
 .block-nearby {
     padding-top: rem(190);
+    @include mobile {
+        padding-top: mobrem(128);
+    }
     .block-head {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+        }
     }
     .page-title {
         font-size: rem(64);
+        @include mobile {
+            font-size: mobrem(48);
+        }
     }
     .select-wrapper {
         width: 100%;
         max-width: rem(555);
         position: relative;
+        @include mobile {
+            max-width: 100%;
+            margin-top: mobrem(32);
+        }
         &::after {
             content: '';
             background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 0L7 5L12 0L14 1L7 8L0 1L2 0Z' fill='%23ECECEC'/%3E%3C/svg%3E%0A");
@@ -2309,6 +2433,12 @@ article {
             top: 50%;
             transform: translateY(-50%);
             pointer-events: none;
+            @include mobile {
+                width: mobrem(14);
+                height: mobrem(8);
+                right: mobrem(20);
+                background-size: mobrem(14) mobrem(8);
+            }
         }
     }
     select {
@@ -2320,11 +2450,17 @@ article {
         padding: 0 rem(20);
         font-size: rem(16);
         line-height: 1.39;
-        letter-spacing: .005em;
+        letter-spacing: .2px;;
         background-color: transparent;
         color: #fff;
         appearance: none;
         cursor: pointer;
+        @include mobile {
+            height: mobrem(42);
+            border-radius: mobrem(30);
+            padding: 0 mobrem(20);
+            font-size: mobrem(16);
+        }
     }
     option {
         background-color: $grey-bg;
@@ -2334,6 +2470,13 @@ article {
         margin-top: rem(48);
         width: 100%;
         height: rem(590);
+        @include mobile {
+            margin-top: mobrem(40);
+            width: auto;
+            margin-left: -$container-padding-x-mobile;
+            margin-right: -$container-padding-x-mobile;
+            height: 70vh;
+        }
     }
 
     .info-window-inner {
@@ -2346,6 +2489,9 @@ article {
         line-height: 1.25;
         font-weight: 500;
         font-style: normal;
+        @include mobile {
+            font-size: mobrem(16);
+        }
     }
     .info-window-phone {
         margin-top: rem(10);
@@ -2353,6 +2499,10 @@ article {
         line-height: 1.25;
         font-weight: 500;
         color: $red;
+        @include mobile {
+            margin-top: mobrem(10);
+            font-size: mobrem(16);
+        }
     }
 }
 
