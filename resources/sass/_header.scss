@@ -4,6 +4,9 @@
     left: 0;
     right: 0;
     z-index: 100;
+    @include mobile {
+        display: none;
+    }
     &-top {
         color: $grey;
         backdrop-filter: blur(24px);

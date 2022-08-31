@@ -5,8 +5,14 @@
     line-height: 1.185;
     font-style: italic;
     text-transform: uppercase;
+    @include mobile {
+        font-size: mobrem(48);
+    }
     &.smaller {
         font-size: rem(74);
+        @include mobile {
+            font-size: mobrem(48);
+        }
     }
 }
 .block-title {
@@ -17,6 +23,9 @@
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
+    @include mobile {
+        font-size: mobrem(40);
+    }
 }
 .btn {
     height: rem(40);
@@ -31,6 +40,12 @@
     font-weight: 700;
     color: #fff;
     transition: $duration;
+    @include mobile {
+        height: mobrem(40);
+        padding: 0 mobrem(20);
+        border-radius: mobrem(20);
+        font-size: mobrem(16);
+    }
     &:hover {
         opacity: .8;
     }
@@ -48,9 +63,19 @@
         border-radius: 50%;
         width: rem(150);
         height: rem(150);
+        font-size: rem(22);
+        @include mobile {
+            width: mobrem(150);
+            height: mobrem(150);
+            font-size: mobrem(22);
+        }
         &.big {
             width: rem(175);
             height: rem(175);
+            @include mobile {
+                width: mobrem(175);
+                height: mobrem(175);
+            }
         }
     }
 }
@@ -69,6 +94,12 @@
         padding-left: rem(55);
         font-size: rem(14);
         color: inherit;
+        @include mobile {
+            height: mobrem(36);
+            border-radius: mobrem(30);
+            padding-left: mobrem(55);
+            font-size: mobrem(14);
+        }
     }
     button {
         pointer-events: none;
@@ -76,9 +107,17 @@
         border: 0;
         top: rem(8);
         left: rem(18);
+        @include mobile {
+            top: mobrem(8);
+            left: mobrem(18);
+        }
         svg {
             width: rem(20);
             height: rem(20);
+            @include mobile {
+                width: mobrem(20);
+                height: mobrem(20);
+            }
         }
     }
 }
@@ -89,6 +128,10 @@
     border: 3px solid $grey-border;
     border-radius: rem(36);
     padding: rem(24);
+    @include mobile {
+        border-radius: mobrem(36);
+        padding: mobrem(20);
+    }
     &-photo {
         height: rem(240);
         width: 100%;
@@ -96,6 +139,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include mobile {
+            height: mobrem(190);
+        }
         &:empty {
             &::after {
                 content: '';
@@ -104,6 +150,10 @@
                 width: rem(73);
                 height: rem(73);
                 background-size: 100%;
+                @include mobile {
+                    width: mobrem(73);
+                    height: mobrem(73);
+                }
             }
         }
         img {
@@ -111,10 +161,14 @@
         }
     }
     &-title {
-        margin-top: 18px;
+        margin-top: rem(20);
         font-size: rem(24);
         line-height: 1.5;
-        font-weight: 600;
+        font-weight: 500;
+        @include mobile {
+            margin-top: mobrem(20);
+            font-size: mobrem(24);
+        }
     }
     &-descr {
         margin-top: rem(10);
@@ -124,6 +178,10 @@
         color: $grey;
         margin-bottom: auto;
         word-wrap: break-word;
+        @include mobile {
+            margin-top: mobrem(10);
+            font-size: mobrem(18);
+        }
         a {
             color: $blue;
             text-decoration: underline;
@@ -135,11 +193,26 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        @include mobile {
+            margin-top: mobrem(24);
+            flex-grow: 1;
+            flex-direction: column;
+            align-items: stretch;
+        }
     }
     &-price {
         font-size: rem(24);
         font-weight: 600;
         line-height: 1.5;
+        @include mobile {
+            font-size: mobrem(24);
+            margin-bottom: auto;
+        }
+    }
+    &-order {
+        @include mobile {
+            margin-top: mobrem(32);
+        }
     }
 }
 
@@ -148,21 +221,43 @@
     padding-top: rem(30);
     font-size: rem(14);
     line-height: 1.43;
+    @include mobile {
+        margin-top: mobrem(100);
+        padding-top: mobrem(20);
+        font-size: mobrem(14);
+    }
     ul {
         list-style: none;
         text-align: center;
+        @include mobile {
+            display: flex;
+        }
     }
     li {
         display: inline-flex;
         align-items: center;
+        @include mobile {
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+            text-overflow: ellipsis;
+        }
         &:not(:last-child) {
+            @include mobile {
+                flex-shrink: 0;
+            }
             &::after {
                 content: '';
                 background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-7.49338e-08 10.2857L4.375 6L-4.49603e-07 1.71429L0.875 -3.82475e-08L7 6L0.875 12L-7.49338e-08 10.2857Z' fill='%23666666'/%3E%3C/svg%3E%0A");
-                background-size: rem(7) rem(12);
+                background-size: 100%;
                 width: rem(7);
                 height: rem(12);
                 margin: 0 rem(10);
+                @include mobile {
+                    width: mobrem(7);
+                    height: mobrem(12);
+                    margin: 0 mobrem(10);
+                }
             }
         }
     }
@@ -174,6 +269,11 @@
         text-transform: uppercase;
         color: $grey;
         font-weight: 700;
+        @include mobile {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
 
@@ -183,6 +283,13 @@
         display: flex;
         width: 100%;
         align-items: center;
+        @include mobile {
+            overflow-x: auto;
+            scrollbar-width: none;
+            width: calc(100% + 2*#{$container-padding-x-mobile});
+            margin-left: -$container-padding-x-mobile;
+            margin-right: -$container-padding-x-mobile;
+        }
         &.blue {
             .tab-selector.active {
                 background-color: $blue;
@@ -193,6 +300,16 @@
             .tab-selector.active {
                 background-color: $red;
                 border-color: $red;
+            }
+        }
+        &::before,
+        &::after {
+            @include mobile {
+                content: '';
+                width: $container-padding-x-mobile;
+                flex-shrink: 0;
+                display: block;
+                height: 100%;
             }
         }
     }
@@ -208,6 +325,23 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        @include mobile {
+            height: mobrem(40);
+            border-radius: mobrem(20);
+            font-size: mobrem(16);
+            padding: 0 mobrem(30);
+            white-space: nowrap;
+        }
+        &:not(:last-child) {
+            @include mobile {
+                margin-right: mobrem(10);
+            }
+        }
+        &:last-child {
+            @include mobile {
+                margin-right: $container-padding-x-mobile;
+            }
+        }
         &.active {
             pointer-events: none;
             // background-color: $red;
@@ -215,6 +349,9 @@
             border-color: $red;
             font-size: rem(20);
             font-weight: 600;
+            @include mobile {
+                font-size: mobrem(20);
+            }
         }
     }
     .divider {
@@ -225,9 +362,15 @@
         border-radius: 50%;
         margin-left: auto;
         margin-right: auto;
+        @include mobile {
+            display: none;
+        }
     }
     .tabs-content {
         padding-top: rem(60);
+        @include mobile {
+            padding-top: mobrem(60);
+        }
     }
     .tab {
         display: none;
@@ -242,6 +385,11 @@
     display: flex;
     align-items: center;
     padding-left: rem(50);
+    @include mobile {
+        width: 100%;
+        justify-content: center;
+        padding: 0;
+    }
     button {
         width: rem(16);
         height: rem(16);
@@ -250,13 +398,24 @@
         background-repeat: no-repeat;
         background-size: rem(8) rem(13);
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.13794 1.63801L2.27594 6.50001L7.13794 11.362L6.19527 12.3047L0.390606 6.50001L6.19527 0.695343L7.13794 1.63801Z' fill='%23C8C8C8'/%3E%3C/svg%3E%0A");
+        @include mobile {
+            width: mobrem(16);
+            height: mobrem(16);
+            background-size: mobrem(8) mobrem(13);
+        }
         &:first-child {
             margin-right: rem(20);
+            @include mobile {
+                margin-right: mobrem(20);
+            }
         }
         &:last-child {
             margin-left: rem(20);
             transform: rotate(-180deg);
             // background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.862061 1.63801L5.72406 6.50001L0.862061 11.362L1.80473 12.3047L7.60939 6.50001L1.80473 0.695343L0.862061 1.63801Z' fill='%23C8C8C8'/%3E%3C/svg%3E%0A");
+            @include mobile {
+                margin-left: mobrem(20);
+            }
         }
     }
     a {
@@ -269,6 +428,11 @@
         font-size: rem(22);
         font-weight: 700;
         color: $grey;
+        @include mobile {
+            width: mobrem(40);
+            height: mobrem(40);
+            font-size: mobrem(22);
+        }
         &:not(:last-child) {
             margin-right: rem(20);
         }
@@ -287,8 +451,16 @@
         background-size: rem(24) rem(7);
         background-position: center;
         background-repeat: no-repeat;
+        @include mobile {
+            width: mobrem(40);
+            height: mobrem(40);
+            background-size: mobrem(24) mobrem(7);
+        }
         &:not(:last-child) {
             margin-right: rem(20);
+            @include mobile {
+                margin-right: mobrem(20);
+            }
         }
     }
 }

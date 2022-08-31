@@ -4,13 +4,20 @@
         display: flex;
         align-items: center;
         width: 100%;
+        @include mobile {
+            margin-top: mobrem(40);
+        }
     }
     &-scrollbar {
         margin: 0 rem(28);
         background: $grey-bg;
         border-radius: 0;
         flex-grow: 1;
-        height: 5px;
+        height: rem(5);
+        @include mobile {
+            height: mobrem(5);
+            margin: 0;
+        }
         &.swiper-scrollbar-horizontal {
             position: relative;
             left: initial;
@@ -33,6 +40,9 @@
         background-size: rem(14) rem(24);
         background-color: $grey-bg;
         transition: $duration;
+        @include mobile {
+            display: none;
+        }
         &-next {
             transform: rotate(-180deg);
         }

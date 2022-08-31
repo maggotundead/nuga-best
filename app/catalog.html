@@ -87,14 +87,16 @@
             </header>
 
             <nav class="breadcrumbs">
-                <ul>
-                    <li>
-                        <a href="/">Главная</a>
-                    </li>
-                    <li>
-                        <span>Каталог</span>
-                    </li>
-                </ul>
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="/">Главная</a>
+                        </li>
+                        <li>
+                            <span>Каталог</span>
+                        </li>
+                    </ul>
+                </div>
             </nav>
 
 			<main class="content">
@@ -103,26 +105,37 @@
                         <h2 class="block-title">Три кита</h2>
                         <div class="title-descr">Здесь надо подумать над текстом, но скорее всего пояснение, что это самые популярные товары</div>
                         <div class="products-grid">
-                            <div class="product-item">
-                                <div class="product-item-photo">
-                                    <img src="img/temp/popular-1.png" alt="">
+                            <div class="swiper-container js-top-products-swiper-mobile">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="product-item-photo">
+                                                <img src="img/temp/popular-1.png" alt="">
+                                            </div>
+                                            <div class="product-item-title">Кровать №4</div>
+                                            <a href="/" class="btn red product-item-details">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="product-item-photo">
+                                                <img src="img/temp/popular-2.png" alt="">
+                                            </div>
+                                            <div class="product-item-title">Массажёр №5</div>
+                                            <a href="/" class="btn red product-item-details">Подробнее</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product-item">
+                                            <div class="product-item-photo">
+                                                <img src="img/temp/popular-3.png" alt="">
+                                            </div>
+                                            <div class="product-item-title">Турманиевый мат</div>
+                                            <a href="/" class="btn red product-item-details">Подробнее</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="product-item-title">Кровать №4</div>
-                                <a href="/" class="btn red product-item-details">Подробнее</a>
-                            </div>
-                            <div class="product-item">
-                                <div class="product-item-photo">
-                                    <img src="img/temp/popular-2.png" alt="">
-                                </div>
-                                <div class="product-item-title">Массажёр №5</div>
-                                <a href="/" class="btn red product-item-details">Подробнее</a>
-                            </div>
-                            <div class="product-item">
-                                <div class="product-item-photo">
-                                    <img src="img/temp/popular-3.png" alt="">
-                                </div>
-                                <div class="product-item-title">Турманиевый мат</div>
-                                <a href="/" class="btn red product-item-details">Подробнее</a>
+                                <div class="swiper-scrollbar"></div>
                             </div>
                         </div>
                     </div>
@@ -289,9 +302,9 @@
                                     <div class="product-card-photo">
                                         <img src="img/temp/product-1.png" alt="" loading="lazy">
                                     </div>
-                                    <div class="product-card-title"></div>
+                                    <div class="product-card-title">Product name</div>
                                     <div class="product-card-descr">
-                                        80 гр <br> ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание <a href="/">Ознакомиться с инструкцией</a>
+                                        80 гр <br> Описание Описание ОписаниеОписание ОписаниеОписаниеОписание <a href="/">Ознакомиться с инструкцией</a>
                                     </div>
                                     <div class="product-card-footer">
                                         <div class="product-card-price">5000 ₽</div>
@@ -302,7 +315,7 @@
                                     <div class="product-card-photo">
                                         <img src="img/temp/product-2.png" alt="" loading="lazy">
                                     </div>
-                                    <div class="product-card-title"></div>
+                                    <div class="product-card-title">Product name</div>
                                     <div class="product-card-descr">
                                         80 гр <br> ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание <a href="/">Ознакомиться с инструкцией</a>
                                     </div>
@@ -315,7 +328,7 @@
                                     <div class="product-card-photo">
                                         <img src="img/temp/product-3.png" alt="" loading="lazy">
                                     </div>
-                                    <div class="product-card-title"></div>
+                                    <div class="product-card-title">Product name</div>
                                     <div class="product-card-descr">
                                         80 гр <br> ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание <a href="/">Ознакомиться с инструкцией</a>
                                     </div>
@@ -328,7 +341,7 @@
                                     <div class="product-card-photo">
                                         <img src="img/temp/product-4.png" alt="" loading="lazy">
                                     </div>
-                                    <div class="product-card-title"></div>
+                                    <div class="product-card-title">Product name</div>
                                     <div class="product-card-descr">
                                         80 гр <br> ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание <a href="/">Ознакомиться с инструкцией</a>
                                     </div>
@@ -339,7 +352,7 @@
                                 </div>
                                 <div class="product-card">
                                     <div class="product-card-photo"></div>
-                                    <div class="product-card-title"></div>
+                                    <div class="product-card-title">Product name</div>
                                     <div class="product-card-descr">
                                         80 гр <br> ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание <a href="/">Ознакомиться с инструкцией</a>
                                     </div>
@@ -352,7 +365,7 @@
                                     <div class="product-card-photo">
                                         <img src="img/temp/product-6.png" alt="" loading="lazy">
                                     </div>
-                                    <div class="product-card-title"></div>
+                                    <div class="product-card-title">Product name</div>
                                     <div class="product-card-descr">
                                         80 гр <br> ОписаниеОписаниеОписаниеОписаниеОписаниеОписаниеОписание <a href="/">Ознакомиться с инструкцией</a>
                                     </div>

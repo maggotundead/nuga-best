@@ -61,3 +61,14 @@ if (tabsGroup) {
         });
     });
 }
+
+const topProductsSwiperMobile = new Swiper('.js-top-products-swiper-mobile', {
+    slidesPerView: 'auto',
+    loop: false,
+    draggable: true,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        // hide: true,
+        draggable: true,
+    },
+});

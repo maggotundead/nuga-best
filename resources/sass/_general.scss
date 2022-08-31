@@ -19,10 +19,14 @@ html {
 
 body {
     font-family: $main-font, serif;
-    line-height: normal;
+    font-size: rem(16);
+    line-height: 1.4;
     font-weight: 400;
     background: $body-bg;
     color: $milk;
+    @include mobile {
+        font-size: mobrem(16);
+    }
 
     &.menu-open {
         overflow: hidden;
@@ -148,6 +152,9 @@ ul, ol {
     &.grey {
         background-color: $grey-bg;
         border-radius: $block-border-radius-desktop;
+        @include mobile {
+            border-radius: $block-border-radius-mobile;
+        }
     }
 }
 
