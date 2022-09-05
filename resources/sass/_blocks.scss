@@ -1582,8 +1582,10 @@
             font-size: rem(24);
             line-height: 1.5;
             font-weight: 500;
-            margin-top: mobrem(20);
-            font-size: mobrem(24);
+            @include mobile {
+                margin-top: mobrem(20);
+                font-size: mobrem(24);
+            }
         }
     }
     .circle {

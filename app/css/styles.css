@@ -3568,9 +3568,11 @@ ul, ol {
     z-index: 2;
     font-size: 1.66667rem;
     line-height: 1.5;
-    font-weight: 500;
-    margin-top: 5.33333rem;
-    font-size: 6.4rem; }
+    font-weight: 500; }
+    @media screen and (max-width: 767px) {
+      .block-tender-partnership .step-item-title {
+        margin-top: 5.33333rem;
+        font-size: 6.4rem; } }
 
 .block-tender-partnership .circle {
   margin-top: 4.86111rem; }
