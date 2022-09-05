@@ -4603,6 +4603,57 @@ article {
     @media screen and (max-width: 767px) {
       .block-vacancies .vacancies-content {
         margin-top: 8rem; } }
+  .block-vacancies .person-groups {
+    display: flex;
+    justify-content: space-between; }
+    @media screen and (max-width: 767px) {
+      .block-vacancies .person-groups {
+        flex-direction: column; } }
+  .block-vacancies .person-group:not(:last-child) {
+    margin-right: 2.22222rem; }
+    @media screen and (max-width: 767px) {
+      .block-vacancies .person-group:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 4.26667rem; } }
+  .block-vacancies .person-group-title {
+    font-size: 1.11111rem;
+    line-height: 1.25;
+    font-weight: 500;
+    color: #666; }
+    @media screen and (max-width: 767px) {
+      .block-vacancies .person-group-title {
+        font-size: 4.26667rem; } }
+  .block-vacancies .person-group-value {
+    margin-top: 0.69444rem;
+    font-size: 1.38889rem;
+    line-height: 1.43;
+    letter-spacing: .2px;
+    color: #c8c8c8; }
+    @media screen and (max-width: 767px) {
+      .block-vacancies .person-group-value {
+        margin-top: 2.66667rem;
+        font-size: 5.33333rem; } }
+    .block-vacancies .person-group-value a {
+      transition: 0.3s; }
+      .block-vacancies .person-group-value a:hover {
+        text-decoration: underline;
+        color: #2330B8; }
+  .block-vacancies .person-annotation {
+    margin-top: 4.16667rem;
+    max-width: 41.66667rem; }
+    @media screen and (max-width: 767px) {
+      .block-vacancies .person-annotation {
+        margin-top: 10.66667rem;
+        max-width: 100%; } }
+    @media screen and (max-width: 767px) {
+      .block-vacancies .person-annotation br {
+        display: none; } }
+  .block-vacancies .person-btn {
+    margin-top: 2.08333rem; }
+    @media screen and (max-width: 767px) {
+      .block-vacancies .person-btn {
+        margin-top: 8rem;
+        width: 100%; } }
   .block-vacancies .vacancies {
     margin-top: 6.94444rem; }
     @media screen and (max-width: 767px) {
