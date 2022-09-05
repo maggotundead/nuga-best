@@ -118,3 +118,16 @@ mobileSearchCloser.addEventListener('click', (e) => {
 //         });
 //     });
 // });
+
+// vacancies
+const blockVacancies = document.querySelector('.block-vacancies');
+if (blockVacancies) {
+    const vacancyToggler = blockVacancies.querySelectorAll('.vacancy-toggler');
+
+    vacancyToggler.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.closest('.vacancy').classList.toggle('opened');
+        });
+    });
+}
+// end vacancies

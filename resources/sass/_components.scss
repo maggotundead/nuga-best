@@ -46,11 +46,19 @@
         border-radius: mobrem(20);
         font-size: mobrem(16);
     }
-    &:hover {
-        opacity: .8;
+    // &:hover {
+    //     opacity: .8;
+    // }
+    &[disabled] {
+        background-color: $grey-border;
+        cursor: not-allowed;
+        filter: initial;
     }
     &.blue {
         background-color: $blue;
+        &:hover {
+            filter: drop-shadow(0px 0px 35px #2400FF);
+        }
     }
     &.blue-border {
         background-color: transparent;
@@ -58,6 +66,9 @@
     }
     &.red {
         background-color: $red;
+        &:hover {
+            filter: drop-shadow(0px 0px 27px #B81C39);
+        }
     }
     &.circle {
         border-radius: 50%;
@@ -68,6 +79,9 @@
             width: mobrem(150);
             height: mobrem(150);
             font-size: mobrem(22);
+        }
+        &:hover {
+            box-shadow: 0px 0px 68px rgba(0, 0, 0, 0.39);
         }
         &.big {
             width: rem(175);
@@ -94,11 +108,15 @@
         padding-left: rem(55);
         font-size: rem(14);
         color: inherit;
+        transition: $duration;
         @include mobile {
             height: mobrem(36);
             border-radius: mobrem(30);
             padding-left: mobrem(55);
             font-size: mobrem(14);
+        }
+        &:hover {
+            border-color: $red;
         }
     }
     button {
@@ -291,15 +309,27 @@
             margin-right: -$container-padding-x-mobile;
         }
         &.blue {
-            .tab-selector.active {
-                background-color: $blue;
-                border-color: $blue;
+            .tab-selector {
+                &:hover {
+                    border-color: $blue;
+                    color: $blue;
+                }
+                &.active {
+                    background-color: $blue;
+                    border-color: $blue;
+                }
             }
         }
         &.red {
-            .tab-selector.active {
-                background-color: $red;
-                border-color: $red;
+            .tab-selector{
+                &:hover {
+                    border-color: $red;
+                    color: $red;
+                }
+                &.active {
+                    background-color: $red;
+                    border-color: $red;
+                }
             }
         }
         &::before,
@@ -325,6 +355,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+        transition: $duration;
         @include mobile {
             height: mobrem(40);
             border-radius: mobrem(20);
@@ -398,6 +429,7 @@
         background-repeat: no-repeat;
         background-size: rem(8) rem(13);
         background-image: url("data:image/svg+xml,%3Csvg width='8' height='13' viewBox='0 0 8 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.13794 1.63801L2.27594 6.50001L7.13794 11.362L6.19527 12.3047L0.390606 6.50001L6.19527 0.695343L7.13794 1.63801Z' fill='%23C8C8C8'/%3E%3C/svg%3E%0A");
+        transition: $duration;
         @include mobile {
             width: mobrem(16);
             height: mobrem(16);
@@ -428,6 +460,10 @@
         font-size: rem(22);
         font-weight: 700;
         color: $grey;
+        transition: $duration;
+        &:hover {
+            color: $blue;
+        }
         @include mobile {
             width: mobrem(40);
             height: mobrem(40);
@@ -442,6 +478,10 @@
         }
         &.last {
             background-color: $grey-border;
+            &:hover {
+                background-color: $blue;
+                color: #fff;
+            }
         }
     }
     span {
