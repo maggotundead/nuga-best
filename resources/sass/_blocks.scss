@@ -199,6 +199,17 @@
                 }
             }
         }
+        &:not(:empty) {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(#000, .4);
+            }
+        }
     }
     .btn {
         position: absolute;
@@ -383,6 +394,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-end;
+        overflow: hidden;
         @include mobile {
             border: 0;
             border-radius: 0;
@@ -436,11 +448,17 @@
             align-items: center;
             justify-content: center;
             flex-grow: 1;
-            width: 100%;
+            // width: 100%;
+            margin-top: rem(-28);
+            margin-left: rem(-32);
+            margin-right: rem(-32);
+            align-self: center;
             @include mobile {
                 border: 3px solid $grey-border;
                 border-radius: mobrem(10);
                 height: mobrem(325);
+                margin: 0;
+                width: 100%;
             }
             &:empty {
                 &::after {
@@ -454,6 +472,9 @@
                         height: mobrem(32);
                     }
                 }
+            }
+            img {
+                aspect-ratio: 16 / 9;
             }
         }
         &-title {
@@ -2273,11 +2294,24 @@ article {
                     background-size: 100%;
                 }
             }
+            &:not(:empty) {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(#000, .6);
+                }
+            }
         }
         &-title {
             font-size: rem(30);
             line-height: 1.35;
             font-weight: 500;
+            position: relative;
+            z-index: 2;
             @include mobile {
                 font-size: mobrem(24);
             }
